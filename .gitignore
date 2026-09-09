@@ -1,0 +1,17 @@
+.venv/
+.DS_Store
+
+# Block VS Code extension temporary files
+tempCodeRunnerFile.py
+__pycache__/
+*.pyc
+
+# Block large reading materials and datasets
+*.pdf
+*.csv
+
+# Block secret API keys and environment variables
+.env
+#Block the practice folder
+Practice/
+.........
