@@ -20,11 +20,12 @@ print(email is not None and email.endswith(".com") and "@" in email)
 #4 check if password is atleast 8 characters long and does not contain spaces
 password = "1.  28934je5hrtebfun5"
 length = len(password)
+strip_length = len(password.replace(" ",""))
 if length >= 8:
-    if len(password.replace(" ","")) == len(password):
+    if length == strip_length:
         print("correct password")
     else:
-        ("Password must be space free")
+        print("Password must be space free") #i missed to write print
 else:
     print("Password must contain atleast 8 characters")
 #5 check if a user name is not empty and the age is greater than or equal to 18
