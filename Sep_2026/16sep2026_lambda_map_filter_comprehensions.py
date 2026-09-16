@@ -129,7 +129,47 @@ def addition(a,b):
     return(a+b)
 print(addition(a,b))
 
+# GOAL 07
+# Write a Python program that works as a simple calculator.
+#
+# The program should:
+# 1. Ask the user for two numbers.
+# 2. Ask the user to select an operation.
+# 6. Return the calculated result from the function.
+# 7. If the operation is invalid, return:
+#
+#    Invalid operation
+#
+# 8. If the user tries to divide by zero, return:
+#
+#    Cannot divide by zero
+#
+# 9. Call the function from your main program.
+# 10. Add at least 2 meaningful comments.
+# 11. Do not use loops.
+# 12. Do not use lists, dictionaries, or sets.
 
+a = float(input("please enter first number: "))
+b = float(input("please enter second number: "))
+c = input("Please enter your desired operation(+,-,*,/): ")
+
+def calculate(a,b,c):
+    if c not in ('+','-','*','/'): #checking for valid operation
+        return "Invalid operation"
+    elif c == '+':
+        return a+b
+    elif c == '-':
+        return a-b
+    elif c == '*':
+        return a*b
+    elif c == '/':
+        if b == 0: #making sure it not divided by 0
+            return f"{a} can not be divided by 0"
+        else:
+            return a/b       
+print(calculate(a,b,c))
+
+##return f"Error: {a} cannot be divided by 0"
 
 
 
