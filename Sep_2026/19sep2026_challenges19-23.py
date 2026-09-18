@@ -10,13 +10,17 @@
 # The program should return the second largest number.
 #
 # Do not simply use sorted() or sort() to solve the problem.
-numbers = "4738575384957"
+numbers = "473857538849999957"
 input_list = []
 for number in numbers:
     input_list.append(int(number))
 def is_second_largest(input_list):
-    input_list.sort()
-    return input_list[-2]
+    unique_input_list = [] #without using unique, sort can give wrong second number if first number is available more than 1 time.
+    for number in input_list:
+        if number not in unique_input_list:
+            unique_input_list.append(number)
+    unique_input_list.sort()
+    return unique_input_list[-2]
 value = is_second_largest(input_list)
 print(value)
 
