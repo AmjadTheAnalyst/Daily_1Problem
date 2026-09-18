@@ -110,11 +110,8 @@ returned_numbers = find_most_frequent(numbers_list)
 print(f'which number is most frequent:{returned_numbers[0]} \nfrequency: {returned_numbers[1]}')
                                 
 '''Nice attempt — you're very close conceptually. Score: 8/10.
-Good: You correctly built a dictionary of frequencies, used max(..., key=...) to find the most frequent number, 
-and returned both the number and its frequency.
-Needs improvement: You're using .count() inside the loop, which works but defeats 
-the main goal of practicing a dictionary as a counter; also, *numbers_list* / *key* are not valid Python syntax 
-(they look like formatting artifacts), and the function can return the two values more simply.'''
+Good: You correctly built a dictionary of frequencies, used max(..., key=...) to find the most frequent number, and returned both the number and its frequency.
+Needs improvement: You're using .count() inside the loop, which works but defeats the main goal of practicing a dictionary as a counter; also, *numbers_list* / *key* are not valid Python syntax (they look like formatting artifacts), and the function can return the two values more simply.'''
 
 
 
@@ -204,4 +201,35 @@ the main goal of practicing a dictionary as a counter; also, *numbers_list* / *k
 #
 # When you're finished, send me your code and I'll review it
 # the same way as the previous challenges.
+
+# ============================================================
+# PYTHON CODING CHALLENGE 16
+# Remove Duplicates from a List
+# ============================================================
+
+# GOAL:
+# Write a Python program that asks the user to enter 10 integers.
+# The program should create a NEW list containing the numbers
+# without duplicates.
+# The original order of the numbers must be preserved.
+numbers = '5738562889' #input("please enter 10 integers: ")
+user_list = []
+for string_number in numbers:
+    user_list.append(int(string_number))
+def remove_duplicates(user_list):
+    seen = [] #just to check and filter duplicates
+    duplicate_value = []
+    for number in user_list:
+        if number in seen:
+            duplicate_value.append(number)
+        else:
+            seen.append(number)
+    return seen
+without_duplicates = remove_duplicates(user_list)
+print(f'This is a list without duplicates: {without_duplicates}') 
+
+# 📝 FEEDBACK SUMMARY:
+# ✅ Successfully removed duplicates while preserving the original order using lists and loops.
+# 🔧 Good understanding of list membership checking; minor improvements needed in comments and unused variables.
+# ⭐ Score: 9/10
 
