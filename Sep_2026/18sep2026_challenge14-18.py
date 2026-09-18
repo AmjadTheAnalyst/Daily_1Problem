@@ -233,3 +233,34 @@ print(f'This is a list without duplicates: {without_duplicates}')
 # 🔧 Good understanding of list membership checking; minor improvements needed in comments and unused variables.
 # ⭐ Score: 9/10
 
+
+# ============================================================
+# PYTHON CODING CHALLENGE 17
+# Find Common Elements Between Two Lists
+# ============================================================
+
+# GOAL:
+# Write a Python program that creates two lists of integers.
+#
+# The program should find the numbers that appear in BOTH lists.
+#
+# Finally, display the common numbers.
+#
+# The order should follow the order in the FIRST list.
+list1 = [2,3,5,7,2,6,8,5,9,3,6] #i know how to take input and convert it into a list of integers.
+list2 = [2,4,6,7,8,2,6]
+def find_common(list1, list2):
+    common_numbers= []
+    for number in list1:
+        if number in list2:
+            if number not in common_numbers:
+                common_numbers.append(number)   #used to avoid repetiton     
+    return common_numbers
+duplicated = find_common(list1,list2)      
+print(duplicated)
+
+#AI FEEDBACK SUMMARY:
+# ✅ Successfully found common elements between two lists while preserving order and removing repetitions.
+# 💡 Strong understanding of list membership, loops, functions, and duplicate prevention without using sets.
+# ⭐ Score: 10/10
+
