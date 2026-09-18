@@ -264,3 +264,33 @@ print(duplicated)
 # 💡 Strong understanding of list membership, loops, functions, and duplicate prevention without using sets.
 # ⭐ Score: 10/10
 
+# ============================================================
+# PYTHON CODING CHALLENGE 18
+# Move All Zeros to the End
+# ============================================================
+
+# GOAL:
+# Write a Python program that takes a list of integers and
+# moves all zeros to the END of the list.
+#
+# The order of all non-zero numbers must remain unchanged.
+#
+# The function should return a NEW list.
+l1 = [1,0,5,7,0,4,0,7,9,0,6]
+def moving_order(l1):
+    non_zero_list =[]
+    zero_list = []
+    for number in l1:
+        if number !=0:
+            non_zero_list.append(number)
+        else:
+            zero_list.append(number)
+    final_sortation = non_zero_list.extend(zero_list)
+    return final_sortation
+arranged_list = moving_order(l1)
+print(arranged_list)
+
+# 📝 FEEDBACK SUMMARY:
+# ✅ Correctly separated zero and non-zero values while preserving the original order.
+# 🔧 Main improvement: understand that extend() modifies the list in place and returns None; also add meaningful comments.
+# ⭐ Score: 7/10
