@@ -286,7 +286,8 @@ def moving_order(l1):
         else:
             zero_list.append(number)
     final_sortation = non_zero_list.extend(zero_list)
-    return final_sortation
+    #bug: extend() modifies the list directly, but it does not return the modified list.
+    return non_zero_list #as extend made changes in non_zero_list so i have to return that
 arranged_list = moving_order(l1)
 print(arranged_list)
 
