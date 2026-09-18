@@ -10,42 +10,6 @@
 #
 # Finally, display the duplicate numbers.
 
-numbers = '634577' #input("Please enter 8 numbers: ")
-'''numbers_list = []
-for number in numbers:    
-    numbers_list.append(number)
-print(numbers_list)'''
-duplicated = set()
-non_duplicate = set()
-for number in numbers:
-    if numbers.count(number) > 1:
-        duplicated.add(number)
-if len(duplicated) == 0:
-    print("No duplicate found")
-else:
-    print(f'duplicated: {duplicated}')
-
-
-#...using function 
-numbers = '67345789' #input("Please enter 8 numbers: ")
-numbers_list = []
-for number in numbers:    
-    numbers_list.append(int(number))
-#print(numbers_list) [6, 7, 3, 4, 5, 7, 5, 7]
-def find_duplicates(numbers_list):
-    duplicate = set()
-    non_duplicate = set()
-    for number in numbers_list:
-        if numbers_list.count(number) > 1:
-            duplicate.add(number)
-        else:
-            non_duplicate.add(number)
-    return duplicate
-returned_duplicated = find_duplicates(numbers_list)
-if len(returned_duplicated) == 0:
-    print("No duplicates")
-else:
-    print(returned_duplicated)
 
 # ------------------------------------------------------------
 # REQUIREMENTS:
@@ -72,3 +36,47 @@ else:
 # 10. Add at least 2 meaningful comments.
 
 # 11. Do not use external libraries.
+
+numbers = '634577' #input("Please enter 8 numbers: ")
+'''numbers_list = []
+for number in numbers:    
+    numbers_list.append(number)
+print(numbers_list)'''
+duplicated = set()
+non_duplicate = set()
+for number in numbers:
+    if numbers.count(number) > 1:
+        duplicated.add(number)
+if len(duplicated) == 0:
+    print("No duplicate found")
+else:
+    print(f'duplicated: {duplicated}')
+
+
+#...using function 
+numbers = '6734589' #input("Please enter 8 numbers: ")
+numbers_list = []
+for number in numbers:    
+    numbers_list.append(int(number))
+#print(numbers_list) [6, 7, 3, 4, 5, 7, 5, 7]
+def find_duplicates(numbers_list):
+    seen = set()
+    duplicate_value = set()
+    for number in numbers_list:
+        if number in seen:
+            duplicate_value.add(number)
+        else:
+            seen.add(number)
+    return duplicate_value
+returned_duplicated = find_duplicates(numbers_list)
+if len(returned_duplicated) == 0:
+    print("No duplicates")
+else:
+    print(returned_duplicated)
+
+#AI Feedback 
+#Score: 8/10
+'''Your logic worked, you used functions, loops, lists, and sets correctly, and your duplicate detection handled repeated values well.
+Needs improvement: You used .count() instead of the intended seen + duplicates approach, and your non_duplicate set wasn't necessary.
+'''
+
