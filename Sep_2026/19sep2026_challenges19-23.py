@@ -116,3 +116,32 @@ s1.passed_subject()
 # ✅ Successfully combined OOP with lists, using **init**, self, attributes, methods, and loops correctly.
 # 🔧 Main improvement: implement highest_mark() manually with a loop and start practicing returning values from methods.
 # ⭐ Score: 8.5/10
+
+# ============================================================
+# PYTHON CODING CHALLENGE 22
+# Find the Highest Temperature
+# ============================================================
+
+# GOAL:
+# Create a TemperatureTracker class that finds the highest
+# temperature from a list without using max().
+class TemperatureTracker():
+    def __init__(self,city,temperature):
+        self.city= city
+        self.temperature = temperature
+    def highest_temperature(self):
+        highest_temperature = None
+        for temperature in self.temperature:
+            if highest_temperature is None or temperature>highest_temperature:
+                highest_temperature = temperature
+        print(f'The highest temperature of {self.city} is {highest_temperature}')
+city1 = TemperatureTracker("Berlin",[18, 21, 16, 24, 19, 27, 22])
+city2 = TemperatureTracker("London",[15, 19, 17, 23, 20, 18, 25])
+
+city1.highest_temperature()
+city2.highest_temperature()
+
+# 📝 FEEDBACK SUMMARY:
+# ✅ Successfully implemented the "highest value so far" algorithm using a loop without max().
+# 💡 Strong understanding of comparison, updating values, OOP, and list iteration.
+# ⭐ Score: 9.5/10
