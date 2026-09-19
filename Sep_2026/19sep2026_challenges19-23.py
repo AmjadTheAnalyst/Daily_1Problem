@@ -91,7 +91,14 @@ class Student():
     def calculate_average(self):
         print(f'The average marks of {self.name} are: {(sum(self.marks))/(len(self.marks))}')
     def highest_mark(self):
-        print(f'The highest marks of {self.name} is: {max(self.marks)}')
+        #print(f'The highest marks of {self.name} is: {max(self.marks)}')
+        #The challenge specifically asked you to not use max() and to use a loop.
+        #The purpose was to make you practice the algorithm yourself.
+        largest = None
+        for mark in self.marks:
+            if largest is None or mark > largest:
+                largest = mark
+        print(f'The highest marks of {self.name} is: {largest}')
     def passed_subject(self):
         passed_marks = []
         for mark in self.marks:
@@ -102,7 +109,7 @@ s1 = Student('Amjad', [54,65,34])
 s2 = Student('Ali', [45,67,98])
 #print(s1.marks)
 s1.calculate_average()
-s1.highest_mark()
+s2.highest_mark()
 s1.passed_subject()
 
 # 📝 FEEDBACK SUMMARY:
