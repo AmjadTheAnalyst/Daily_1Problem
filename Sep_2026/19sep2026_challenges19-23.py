@@ -76,3 +76,36 @@ s2 = Student('Ali', [4,32,67])
 #print(s1.average)
 s1.find_avg()
 s2.find_avg()
+
+# ============================================================
+# PYTHON CODING CHALLENGE 21
+# OOP: Student Marks Analyzer
+# ============================================================
+# GOAL:
+# Improve your Student class by giving each student a list
+# of marks and methods to analyze those marks.
+class Student():
+    def __init__(self,name,marks):
+        self.name = name
+        self.marks = marks
+    def calculate_average(self):
+        print(f'The average marks of {self.name} are: {(sum(self.marks))/(len(self.marks))}')
+    def highest_mark(self):
+        print(f'The highest marks of {self.name} is: {max(self.marks)}')
+    def passed_subject(self):
+        passed_marks = []
+        for mark in self.marks:
+            if mark >= 50:
+                passed_marks.append(mark)
+        print(f'Mr.{self.name} is passed in {len(passed_marks)} subjects')
+s1 = Student('Amjad', [54,65,34])
+s2 = Student('Ali', [45,67,98])
+#print(s1.marks)
+s1.calculate_average()
+s1.highest_mark()
+s1.passed_subject()
+
+# 📝 FEEDBACK SUMMARY:
+# ✅ Successfully combined OOP with lists, using **init**, self, attributes, methods, and loops correctly.
+# 🔧 Main improvement: implement highest_mark() manually with a loop and start practicing returning values from methods.
+# ⭐ Score: 8.5/10
