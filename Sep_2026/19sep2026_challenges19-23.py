@@ -145,3 +145,38 @@ city2.highest_temperature()
 # ✅ Successfully implemented the "highest value so far" algorithm using a loop without max().
 # 💡 Strong understanding of comparison, updating values, OOP, and list iteration.
 # ⭐ Score: 9.5/10
+
+
+# ============================================================
+# PYTHON CODING CHALLENGE 23
+# Find the Second Highest Score
+# ============================================================
+
+# GOAL:
+# Create a GamePlayer class that finds the second highest
+# UNIQUE score from a list.
+class GamePlayer():
+    def __init__(self,name,scores):
+        self.name = name
+        self.score = scores
+    def second_highest_score(self):
+        first_highest = None
+        second_highest = None
+        for score in self.score:
+            if first_highest is None or score > first_highest:
+                first_highest = score
+        for score in self.score:
+            if score < first_highest and (second_highest is None or score > second_highest):
+                 second_highest = score 
+        print(f'first highest score of {self.name} is {first_highest}')  
+        print(f'second highest score of {self.name} is {second_highest}')
+player1 = GamePlayer("Amjad",[85, 92, 78, 95, 92, 88]) 
+player2 = GamePlayer("Ali",[70, 91, 84, 91, 76, 89])
+print(player1.name)
+player1.second_highest_score()
+player2.second_highest_score()
+
+#🟢 Pattern 3 — Top 2 / Top K: CLEARED ✅
+#🎯 Score: 9.8/10
+#💡 Correctly identified first and second highest while handling duplicate highest values.
+#🚀 Next: Pattern 4 — Frequency / Counting
