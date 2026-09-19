@@ -180,3 +180,20 @@ player2.second_highest_score()
 #🎯 Score: 9.8/10
 #💡 Correctly identified first and second highest while handling duplicate highest values.
 #🚀 Next: Pattern 4 — Frequency / Counting
+
+
+#...............................................................................................
+# Pattern 4/15 — Frequency / Counting
+# Challenge 24 — Count Player Scores
+scores = [85, 92, 78, 92, 85, 92, 88, 78]
+def count_scores(scores):
+    score_frequency = {}
+    for score in scores:
+        score_frequency.update({score: scores.count(score)})
+    return score_frequency
+result_ready = count_scores(scores)
+print(type(result_ready))
+print(result_ready)
+
+# Expected output:
+# {85: 2, 92: 3, 78: 2, 88: 1}
