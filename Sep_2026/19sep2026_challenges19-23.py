@@ -189,7 +189,10 @@ scores = [85, 92, 78, 92, 85, 92, 88, 78]
 def count_scores(scores):
     score_frequency = {}
     for score in scores:
-        score_frequency.update({score: scores.count(score)})
+        if score in score_frequency:
+            score_frequency[score] +=1
+        else:
+            score_frequency[score] =1
     return score_frequency
 result_ready = count_scores(scores)
 print(type(result_ready))
