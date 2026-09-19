@@ -200,3 +200,32 @@ print(result_ready)
 
 # Expected output:
 # {85: 2, 92: 3, 78: 2, 88: 1}
+
+#....................................................................................
+# Pattern 4/15 — Frequency / Counting
+# Challenge 25 — Count Product Purchases
+#returns a dictionary showing how many times each product was purchased.
+purchases = [
+    "laptop",
+    "mouse",
+    "keyboard",
+    "laptop",
+    "mouse",
+    "laptop",
+    "headphones",
+    "keyboard"
+]
+def count_purchases(purchases):
+    purchase_frequency = {}
+    for item in purchases:
+        if item in purchase_frequency:
+            purchase_frequency[item] += 1
+        else:
+            purchase_frequency[item] = 1
+    return purchase_frequency
+result = count_purchases(purchases)
+print(result)
+
+#✅ Challenge 25 — Frequency / Counting: Successfully implemented dictionary-based frequency counting without .count() or Counter.
+#🧠 Demonstrated understanding of checking existing keys and updating their values correctly.
+#🏆 Score: 10/10 | Pattern 4/15 — CLEARED
