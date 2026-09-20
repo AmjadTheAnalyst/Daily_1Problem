@@ -405,3 +405,35 @@ print(result)
 #🧠 Core comparison logic was correct; main improvement is distinguishing a set from a key-value dictionary when building results.
 #🏆 Score: 9/10 | Pattern 9/15 — IN PROGRESS
 #[{'Python', 'Ali'}, {'Deep Learning', 'Sara'}, {'David', 'Machine Learning'}, {'Maria', 'SQL'}]
+
+#..............................................................................................................................
+#🔵 Pattern 9/15 — Two-List Comparison
+#Challenge #40 — Match Products with Warehouse Stock
+
+products = [
+    {"product_id": 201, "name": "Laptop"},
+    {"product_id": 202, "name": "Keyboard"},
+    {"product_id": 203, "name": "Monitor"},
+    {"product_id": 204, "name": "Mouse"}
+]
+
+warehouse = [
+    {"id": 203, "stock": 12},
+    {"id": 201, "stock": 5},
+    {"id": 204, "stock": 30},
+    {"id": 202, "stock": 18}
+]
+def get_product_stock(products, warehouse):
+    new_list = []
+    for product in products:
+        for warehouse_item in warehouse:
+            if product["product_id"] == warehouse_item["id"]:
+                new_dict = {'name': product.get('name'), 'stock':warehouse_item.get('stock') }
+                new_list.append(new_dict)
+    return new_list
+result = get_product_stock(products, warehouse)
+print(result)
+
+#✅ Challenge 40 — Two-List Comparison: Correctly matched products with warehouse records using nested loops and matching IDs.
+#🧠 Successfully built the required dictionary result after correcting the set-vs-dictionary issue from the previous challenge.
+#🏆 Score: 10/10 | Pattern 9/15 — CLEARED ✅
