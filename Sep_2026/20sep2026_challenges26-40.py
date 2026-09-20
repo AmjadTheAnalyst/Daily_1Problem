@@ -364,3 +364,44 @@ print(result)
 #✅ Challenge 38 — Searching: Correctly searched flight records by flight number and returned the matching dictionary immediately.
 #🧠 Demonstrated complete understanding of the Search → Match → Return pattern, including None when no match exists.
 #🏆 Score: 10/10 | Pattern 8/15 — CLEARED ✅
+
+#...................................................................................................
+#🔵 Pattern 9/15 — Two-List Comparison
+#Challenge #39 — Match Students with Their Assigned Courses
+
+students = [
+    {"id": 101, "name": "Ali"},
+    {"id": 102, "name": "Sara"},
+    {"id": 103, "name": "David"},
+    {"id": 104, "name": "Maria"}
+]
+
+enrollments = [
+    {"student_id": 103, "course": "Machine Learning"},
+    {"student_id": 101, "course": "Python"},
+    {"student_id": 104, "course": "SQL"},
+    {"student_id": 102, "course": "Deep Learning"}
+]
+#Requirements
+#For every student in students:
+#Look through enrollments.
+#Find the enrollment whose student_id matches the student's id.
+#Create a new dictionary containing:
+#"name"
+#"course"
+#Add that dictionary to a result list.
+#Return the final result list.
+def get_student_courses(students, enrollments):
+    name_enrollment = []
+    for student in students:
+        for enrollment in enrollments:
+            if student.get('id') == enrollment.get('student_id'):
+                new_data = {student.get('name'), enrollment.get('course')}
+                name_enrollment.append(new_data)
+    return name_enrollment
+result = get_student_courses(students, enrollments)
+print(result)
+#✅ Challenge 39 — Two-List Comparison: Correctly compared student IDs with enrollment IDs using nested loops.
+#🧠 Core comparison logic was correct; main improvement is distinguishing a set from a key-value dictionary when building results.
+#🏆 Score: 9/10 | Pattern 9/15 — IN PROGRESS
+#[{'Python', 'Ali'}, {'Deep Learning', 'Sara'}, {'David', 'Machine Learning'}, {'Maria', 'SQL'}]
