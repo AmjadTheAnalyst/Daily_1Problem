@@ -238,3 +238,28 @@ print(result)
 # ✅ Challenge 33 — Filtering: Correctly filtered credit transactions above the required amount and returned their IDs in order.
 # 🧠 Demonstrated consistent mastery of single and compound filtering conditions across different contexts.
 # 🏆 Score: 10/10 | Pattern 6/15 — IN PROGRESS
+
+#........................................................................................................................................
+files = [
+    "report.pdf",
+    "photo.jpg",
+    "data.csv",
+    "notes.txt",
+    "presentation.pdf",
+    "script.py",
+    "summary.pdf",
+    "image.png"
+]
+
+def find_pdf_files(files):
+    pdf_files = []
+    for file in files:
+        if file.endswith('.pdf'):
+            pdf_files.append(file)
+    return pdf_files
+result = find_pdf_files(files)
+print(result)
+
+# ✅ Challenge 34 — Filtering: Correctly filtered PDF files using a string condition and preserved the original order.
+# 🧠 Demonstrated consistent mastery of the filtering pattern across numeric, dictionary, compound, and string-based conditions.
+# 🏆 Score: 10/10 | Pattern 6/15 — CLEARED ✅
