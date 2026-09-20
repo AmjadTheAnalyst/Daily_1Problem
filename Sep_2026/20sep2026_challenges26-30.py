@@ -157,3 +157,34 @@ print(result)
 #✅ Challenge 30 — Filtering: Correctly filtered employees based on age and returned only the qualifying names in order.
 #🧠 Demonstrated the core filtering pattern using a condition, loop, list, and dictionary access; only minor cleanup was needed.
 #🏆 Score: 9.8/10 | Pattern 6/15 — IN PROGRESS
+
+
+#....................................................................................................................................
+# Pattern 6/15 — Filtering
+# Challenge 31 — Filter Available Products
+products = [
+    {"name": "Laptop", "stock": 12},
+    {"name": "Mouse", "stock": 0},
+    {"name": "Keyboard", "stock": 7},
+    {"name": "Monitor", "stock": 0},
+    {"name": "Headphones", "stock": 15},
+    {"name": "Webcam", "stock": 3}
+]
+#Return the names of products that are currently in stock.
+def find_available_products(products):
+    available_products = []
+    not_available_products = []
+    for product in products:
+        if product.get('stock') != 0 and product.get('name') not in available_products:
+            available_products.append(product.get('name'))
+        else:
+            not_available_products.append(product.get('name'))
+    return available_products
+result = find_available_products(products)
+print(result)
+
+# ✅ Challenge 31 — Filtering: Correctly filtered available products using a stock condition and returned their names in order.
+#🧠 Demonstrated the core filtering pattern independently in a new context; minor cleanup and a more precise > 0 condition would improve the solution.
+#🏆 Score: 9.7/10 | Pattern 6/15 — IN PROGRESS
+
+#............................................................................................................................................................
