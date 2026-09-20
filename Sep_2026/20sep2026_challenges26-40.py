@@ -213,3 +213,28 @@ print(result)
 # ✅ Challenge 32 — Filtering: Correctly filtered students using two conditions with AND and returned only qualified names.
 # 🧠 Demonstrated strong understanding of compound filtering logic and applied the pattern correctly in a new context.
 # 🏆 Score: 10/10 | Pattern 6/15 — IN PROGRESS
+
+#.................................................................................................................................
+transactions = [
+    {"id": 101, "type": "credit", "amount": 250},
+    {"id": 102, "type": "debit", "amount": 80},
+    {"id": 103, "type": "credit", "amount": 120},
+    {"id": 104, "type": "debit", "amount": 300},
+    {"id": 105, "type": "credit", "amount": 450},
+    {"id": 106, "type": "credit", "amount": 90}
+]
+#Return the transaction IDs where:
+#type is "credit"
+#AND amount is greater than 200
+def find_large_credits(transactions):
+    qualified_transactions = []
+    for transaction in transactions:
+        if transaction.get('type') == 'credit' and transaction.get('amount')>200:
+            qualified_transactions.append(transaction.get('id'))
+    return qualified_transactions 
+result = find_large_credits(transactions)
+print(result)
+
+# ✅ Challenge 33 — Filtering: Correctly filtered credit transactions above the required amount and returned their IDs in order.
+# 🧠 Demonstrated consistent mastery of single and compound filtering conditions across different contexts.
+# 🏆 Score: 10/10 | Pattern 6/15 — IN PROGRESS
