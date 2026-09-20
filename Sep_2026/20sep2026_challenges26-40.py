@@ -311,3 +311,31 @@ print(result)
 # ✅ Challenge 36 — Searching: Correctly identified the target product, but the else branch can overwrite a previously found result.
 # 🧠 Key lesson: return immediately when the target is found, then return None only after the entire search finishes without a match.
 # 🏆 Score: 9.5/10 | Pattern 8/15 — IN PROGRESS
+
+#.................................................................................................................................................
+# Pattern 8/15 — Searching
+# Challenge 37 — Find Student by ID
+
+students = [
+    {"id": 101, "name": "Ali", "major": "Mathematics"},
+    {"id": 205, "name": "Sara", "major": "Computer Science"},
+    {"id": 302, "name": "John", "major": "Physics"},
+    {"id": 410, "name": "Maria", "major": "Data Science"},
+    {"id": 512, "name": "David", "major": "Engineering"}
+]
+#Search for the student whose "id" matches student_id.
+#Return the complete student dictionary when found.
+#If the ID doesn't exist, return None.
+def find_student(students, student_id):
+    for student in students:
+        if student.get('id') == student_id:
+            return student
+    return None
+         
+result = find_student(students, 678)
+
+print(result)
+
+# ✅ Challenge 37 — Searching: Correctly searched for a student by ID, returned immediately when found, and handled missing IDs with None.
+# 🧠 Demonstrated complete understanding of the Search → Find → Return pattern after correcting the previous overwrite issue.
+# 🏆 Score: 10/10 | Pattern 8/15 — IN PROGRESS
