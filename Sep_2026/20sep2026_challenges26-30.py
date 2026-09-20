@@ -58,3 +58,38 @@ print(result)
 #✅ Challenge 27 — Seen / Duplicate Tracking: Correctly used a set to detect repeated student IDs and a list to store unique duplicates in order.
 #🧠 Demonstrated complete understanding of the seen-set duplicate-tracking pattern in a new context.
 #🏆 Score: 10/10 | Pattern 5/15 — CLEARED ✅
+
+#.........................................................................................................................................................................
+# Pattern 5/15 — Seen / Duplicate Tracking
+# Challenge 28 — Find Repeated Email Addresses
+
+emails = [
+    "ali@gmail.com",
+    "sara@gmail.com",
+    "john@gmail.com",
+    "ali@gmail.com",
+    "maria@gmail.com",
+    "sara@gmail.com",
+    "david@gmail.com",
+    "john@gmail.com",
+    "sara@gmail.com"
+]
+
+def find_repeated_emails(emails):
+    seen = set()
+    duplicate_email = []
+    for email in emails:
+        if email in seen and email not in duplicate_email:
+            duplicate_email.append(email)
+        else:
+            seen.add(email)
+    return duplicate_email
+result = find_repeated_emails(emails)
+print(result)
+
+# Expected output:
+# ["ali@gmail.com", "sara@gmail.com", "john@gmail.com"]
+
+#✅ Challenge 28 — Seen / Duplicate Tracking: Correctly identified repeated email addresses using a set and preserved unique duplicates in order.
+#🧠 Demonstrated consistent mastery of the seen-set pattern across different contexts without using .count() or Counter.
+#🏆 Score: 10/10 | Pattern 5/15 — CLEARED ✅
