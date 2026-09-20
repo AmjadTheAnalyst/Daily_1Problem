@@ -396,7 +396,7 @@ def get_student_courses(students, enrollments):
     for student in students:
         for enrollment in enrollments:
             if student.get('id') == enrollment.get('student_id'):
-                new_data = {student.get('name'), enrollment.get('course')}
+                new_data = {'name': student.get('name'), 'course': enrollment.get('course')}
                 name_enrollment.append(new_data)
     return name_enrollment
 result = get_student_courses(students, enrollments)
