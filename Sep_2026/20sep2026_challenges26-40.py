@@ -283,3 +283,31 @@ print(result)
 # 🧠 Demonstrated clear understanding of transforming every input item into a new output value rather than filtering items.
 # 🏆 Score: 10/10 | Pattern 7/15 — IN PROGRESS
 #...................................................................................................................................................................
+# Pattern 8/15 — Searching
+# Challenge 36 — Find a Product by Name
+
+products = [
+    {"name": "Laptop", "price": 1200},
+    {"name": "Mouse", "price": 35},
+    {"name": "Keyboard", "price": 80},
+    {"name": "Monitor", "price": 300},
+    {"name": "Headphones", "price": 150}
+]
+#Search for the product whose "name" matches product_name.
+#Return the complete product dictionary when found.
+#If the product does not exist, return None.
+def find_product(products, product_name):
+    final_result = ''
+    for product in products:
+        if product.get('name') == product_name:
+            final_result = product
+        else:
+            final_result = None
+    return final_result
+result = find_product(products, "Monitor")
+
+print(result)
+
+# ✅ Challenge 36 — Searching: Correctly identified the target product, but the else branch can overwrite a previously found result.
+# 🧠 Key lesson: return immediately when the target is found, then return None only after the entire search finishes without a match.
+# 🏆 Score: 9.5/10 | Pattern 8/15 — IN PROGRESS
