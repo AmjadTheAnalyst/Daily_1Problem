@@ -188,3 +188,28 @@ print(result)
 #🏆 Score: 9.7/10 | Pattern 6/15 — IN PROGRESS
 
 #............................................................................................................................................................
+students = [
+    {"name": "Ali", "marks": 78, "attendance": 85},
+    {"name": "Sara", "marks": 91, "attendance": 92},
+    {"name": "John", "marks": 64, "attendance": 88},
+    {"name": "Maria", "marks": 83, "attendance": 72},
+    {"name": "David", "marks": 95, "attendance": 96},
+    {"name": "Emma", "marks": 88, "attendance": 79}
+]
+#A student is qualified only if:
+#marks are 80 or higher
+#and attendance is 80 or higher
+# Return only the qualified students' names.
+
+def find_qualified_students(students):
+    qualified_students = []
+    for student in students:
+        if student.get('marks') >= 80 and student.get('attendance')>=80:
+            qualified_students.append(student.get('name'))
+    return qualified_students
+result = find_qualified_students(students)
+print(result)
+
+# ✅ Challenge 32 — Filtering: Correctly filtered students using two conditions with AND and returned only qualified names.
+# 🧠 Demonstrated strong understanding of compound filtering logic and applied the pattern correctly in a new context.
+# 🏆 Score: 10/10 | Pattern 6/15 — IN PROGRESS
