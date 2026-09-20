@@ -126,3 +126,34 @@ print(result)
 # ✅ Challenge 29 — Seen / Duplicate Tracking: Correctly identified repeated ISBNs using a set while preserving unique duplicates in order.
 #🧠 Demonstrated consistent mastery of duplicate tracking across multiple unrelated contexts.
 #🏆 Score: 10/10 | Pattern 5/15 — CLEARED ✅
+
+
+
+#.....................................................................................................................................................
+# Pattern 6/15 — Filtering
+# Challenge 30 — Filter Eligible Employees
+
+employees = [
+    {"name": "Ali", "age": 24},
+    {"name": "Sara", "age": 31},
+    {"name": "John", "age": 27},
+    {"name": "Maria", "age": 19},
+    {"name": "David", "age": 35},
+    {"name": "Emma", "age": 22}
+]
+#Return the names of employees whose age is 25 or older.
+def find_eligible_employees(employees):
+    eligible_employees = []
+    non_eligible_employees = []
+    for employee in employees:
+        if employee.get('age') >=25:
+            eligible_employees.append(employee.get('name'))
+        else:
+            non_eligible_employees.append(employee.get('name'))
+    return eligible_employees
+result = find_eligible_employees(employees)
+print(result)
+
+#✅ Challenge 30 — Filtering: Correctly filtered employees based on age and returned only the qualifying names in order.
+#🧠 Demonstrated the core filtering pattern using a condition, loop, list, and dictionary access; only minor cleanup was needed.
+#🏆 Score: 9.8/10 | Pattern 6/15 — IN PROGRESS
