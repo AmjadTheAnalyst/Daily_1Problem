@@ -339,3 +339,28 @@ print(result)
 # ✅ Challenge 37 — Searching: Correctly searched for a student by ID, returned immediately when found, and handled missing IDs with None.
 # 🧠 Demonstrated complete understanding of the Search → Find → Return pattern after correcting the previous overwrite issue.
 # 🏆 Score: 10/10 | Pattern 8/15 — IN PROGRESS
+#......................................................................................................................................
+
+
+
+#🟢 Pattern 8/15 — Searching
+#Challenge #38 — Find a Flight Destination
+#You have a list of flight records. Write a function that searches for a flight using its flight number.
+flights = [
+    {"flight": "LH401", "destination": "New York", "gate": "B12"},
+    {"flight": "BA902", "destination": "London", "gate": "A07"},
+    {"flight": "AF123", "destination": "Paris", "gate": "C21"},
+    {"flight": "EK202", "destination": "Dubai", "gate": "D05"},
+    {"flight": "SQ321", "destination": "Singapore", "gate": "E14"}
+]
+def find_flight(flights, flight_number):
+    for flight in flights:
+        if flight.get('flight') == flight_number:
+            return flight
+    return None
+result = find_flight(flights,'SQ321')
+print(result)
+
+#✅ Challenge 38 — Searching: Correctly searched flight records by flight number and returned the matching dictionary immediately.
+#🧠 Demonstrated complete understanding of the Search → Match → Return pattern, including None when no match exists.
+#🏆 Score: 10/10 | Pattern 8/15 — CLEARED ✅
