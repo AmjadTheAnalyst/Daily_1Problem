@@ -263,3 +263,23 @@ print(result)
 # ✅ Challenge 34 — Filtering: Correctly filtered PDF files using a string condition and preserved the original order.
 # 🧠 Demonstrated consistent mastery of the filtering pattern across numeric, dictionary, compound, and string-based conditions.
 # 🏆 Score: 10/10 | Pattern 6/15 — CLEARED ✅
+
+#......................................................................................................................................
+# Pattern 7/15 — Building Result Lists
+# Challenge 35 — Convert Celsius to Fahrenheit
+
+celsius_temperatures = [0, 10, 20, 25, 30, 40]
+#F = (C × 9/5) + 32
+def convert_to_fahrenheit(celsius_temperatures):
+    fahrenheit_temperatures = []
+    for temperature in celsius_temperatures:
+        converted_temperature = (temperature * 9/5) + 32
+        fahrenheit_temperatures.append(converted_temperature)
+    return fahrenheit_temperatures
+result = convert_to_fahrenheit(celsius_temperatures)
+print(result)
+
+# ✅ Challenge 35 — Building Result Lists: Correctly transformed each Celsius value into Fahrenheit and built a new result list while preserving order.
+# 🧠 Demonstrated clear understanding of transforming every input item into a new output value rather than filtering items.
+# 🏆 Score: 10/10 | Pattern 7/15 — IN PROGRESS
+#...................................................................................................................................................................
