@@ -93,3 +93,36 @@ print(result)
 #✅ Challenge 28 — Seen / Duplicate Tracking: Correctly identified repeated email addresses using a set and preserved unique duplicates in order.
 #🧠 Demonstrated consistent mastery of the seen-set pattern across different contexts without using .count() or Counter.
 #🏆 Score: 10/10 | Pattern 5/15 — CLEARED ✅
+
+#........................................................................................................................................................
+# Pattern 5/15 — Seen / Duplicate Tracking
+# Challenge 29 — Find Repeated Book ISBNs
+
+isbn_numbers = [
+    "978-001",
+    "978-045",
+    "978-102",
+    "978-078",
+    "978-045",
+    "978-210",
+    "978-001",
+    "978-330",
+    "978-102",
+    "978-045"
+]
+
+def find_repeated_isbn(isbn_numbers):
+    seen = set()
+    duplicated_isbn = []
+    for isbn in isbn_numbers:
+        if isbn in seen and isbn not in duplicated_isbn:
+            duplicated_isbn.append(isbn)
+        else:
+            seen.add(isbn)
+    return duplicated_isbn
+result = find_repeated_isbn(isbn_numbers)
+print(result)
+
+# ✅ Challenge 29 — Seen / Duplicate Tracking: Correctly identified repeated ISBNs using a set while preserving unique duplicates in order.
+#🧠 Demonstrated consistent mastery of duplicate tracking across multiple unrelated contexts.
+#🏆 Score: 10/10 | Pattern 5/15 — CLEARED ✅
