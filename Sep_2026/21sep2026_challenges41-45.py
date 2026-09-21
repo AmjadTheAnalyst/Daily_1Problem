@@ -52,3 +52,18 @@ print(result)
 #✅ Challenge 43 — Nested Loops: Correctly compared two course lists using nested loops while preserving order and preventing duplicates.
 #🧠 Demonstrated consistent mastery of nested iteration across three different real-world contexts.
 #🏆 Score: 10/10 | Pattern 10/15 — CLEARED ✅
+#............................................................................................................................................
+
+numbers = [1, 3, 4, 6, 8, 10, 13]
+target = 14
+left = numbers[0]
+right = numbers[-1]
+def find_pair(numbers, target):
+    current_sum = left + right
+    if current_sum == target:
+        return [left, right]
+    elif current_sum > target:
+        right-1
+
+result = find_pair(numbers, target)
+print(result)
