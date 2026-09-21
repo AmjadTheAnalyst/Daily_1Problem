@@ -34,3 +34,21 @@ print(result)
 #✅ Challenge 42 — Nested Loops: Correctly found common dishes using nested loops while preserving order and preventing duplicates.
 #🧠 Demonstrated that the nested-loop comparison pattern transfers correctly to a completely different context.
 #🏆 Score: 10/10 | Pattern 10/15 — IN PROGRESS
+
+student_a = ["Math", "Python", "Statistics", "SQL"]
+student_b = ["SQL", "Machine Learning", "Python", "Deep Learning"]
+#Find courses that appear in both students' course lists.
+#Do not include duplicates in the result.
+def find_shared_courses(student_a, student_b):
+    common_courses = []
+    for course_a in student_a:
+        for course_b in student_b:
+            if course_a == course_b and course_b not in common_courses:
+                common_courses.append(course_a)
+    return common_courses
+result = find_shared_courses(student_a, student_b)
+
+print(result)
+#✅ Challenge 43 — Nested Loops: Correctly compared two course lists using nested loops while preserving order and preventing duplicates.
+#🧠 Demonstrated consistent mastery of nested iteration across three different real-world contexts.
+#🏆 Score: 10/10 | Pattern 10/15 — CLEARED ✅
