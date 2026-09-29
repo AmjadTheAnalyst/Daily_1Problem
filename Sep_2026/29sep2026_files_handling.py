@@ -117,17 +117,14 @@ with open('Sep_2026/tasks.txt', 'a') as f:
 #Problem 8
 #Return a list containing students whose score is 80 or higher.
 with open('Sep_2026/scores.txt', 'r') as f:
-    data = True
+    data = f.readline()
+    eligible_students = []
     while data:
+        name, score = data.strip().split(',')
+        if int(score) >= 80:
+            eligible_students.append(name)
         data = f.readline()
-        if data == '':
-            break
-        eligible_students = []
-        for number in range(79, 101):
-            if str(number) in data:
-                eligible_students.append(data)
     print(eligible_students)
-
 #⚠️ Problem 08 — Filter Lines: Correctly read the file line-by-line, but the result list was reset inside the loop and scores were searched as strings instead of being parsed as numbers.
 #🧠 Key learning: Read → parse → convert data type → apply condition. Also keep accumulated results outside the loop.
 #🏆 Score: 6.5/10 | Text File Handling — IN PROGRESS
