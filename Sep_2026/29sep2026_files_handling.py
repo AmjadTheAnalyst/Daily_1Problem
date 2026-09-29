@@ -113,3 +113,21 @@ with open('Sep_2026/tasks.txt', 'a') as f:
 #✅ Problem 06 — Append New Data: Correctly used append mode to add a new task to the existing text file without overwriting previous content.
 #🧠 Key learning: Demonstrated the difference between write mode and append mode and correctly handled line separation.
 #🏆 Score: 10/10 | Text File Handling — IN PROGRESS
+
+#Problem 8
+#Return a list containing students whose score is 80 or higher.
+with open('Sep_2026/scores.txt', 'r') as f:
+    data = True
+    while data:
+        data = f.readline()
+        if data == '':
+            break
+        eligible_students = []
+        for number in range(79, 101):
+            if str(number) in data:
+                eligible_students.append(data)
+    print(eligible_students)
+
+#⚠️ Problem 08 — Filter Lines: Correctly read the file line-by-line, but the result list was reset inside the loop and scores were searched as strings instead of being parsed as numbers.
+#🧠 Key learning: Read → parse → convert data type → apply condition. Also keep accumulated results outside the loop.
+#🏆 Score: 6.5/10 | Text File Handling — IN PROGRESS
