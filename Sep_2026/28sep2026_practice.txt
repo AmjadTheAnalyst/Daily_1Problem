@@ -1,0 +1,25 @@
+I am adding new linesce file for files handling
+Hello Amjad
+This is a fileI am adding new lines
+I am adding new lines
+I am adding new lines
+I am adding new lines
+
+
+
+students = [
+    {"id": 101, "name": "Ali"},
+    {"id": 102, "name": "Sara"},
+    {"id": 103, "name": "David"},
+    {"id": 104, "name": "Maria"}
+]
+enrollments = [
+    {"student_id": 103, "course": "Machine Learning"},
+    {"student_id": 101, "course": "Python"},
+    {"student_id": 104, "course": "SQL"},
+    {"student_id": 102, "course": "Deep Learning"}
+]
+def_list(a,b)
+a= students:
+b=enrollment:
+print(a,b):
