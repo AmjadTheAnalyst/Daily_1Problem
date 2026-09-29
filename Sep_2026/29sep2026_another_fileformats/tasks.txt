@@ -1,0 +1,4 @@
+Learn Python
+Practice SQL
+Study MLlearn sql as well
+add

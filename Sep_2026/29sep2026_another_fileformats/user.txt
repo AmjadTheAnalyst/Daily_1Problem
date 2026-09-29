@@ -1,0 +1,3 @@
+Name: Amjad
+Age: 23
+City: Berlin

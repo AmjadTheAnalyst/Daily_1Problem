@@ -1,0 +1,4 @@
+Python is powerful.
+Machine learning is interesting.
+I am learning artificial intelligence.
+Programming requires consistent practice.

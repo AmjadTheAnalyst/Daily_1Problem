@@ -1,0 +1,202 @@
+Python is easy to learn
+Python is powerful
+Python is useful
+
+.....
+Absolutely. Since you're practicing text file handling today, let's keep the exercises focused on real Python file operations rather than mixing in advanced topics.
+
+I'll give you a progression from basic → intermediate → practical, and you can solve them one at a time. I won't give solutions unless you ask.
+
+Text File Handling Practice
+Question 1 — Read a File
+
+Create a file called notes.txt containing:
+
+Python
+SQL
+Machine Learning
+Deep Learning
+
+Write a function:
+
+def read_notes(filename):
+    # your code
+
+Requirements:
+
+Open the file.
+Read its contents.
+Return the contents.
+Print the returned result.
+Question 2 — Count Lines
+
+Create students.txt:
+
+Ali
+Sara
+David
+Amjad
+John
+
+Write:
+
+def count_lines(filename):
+    # your code
+
+Return the total number of lines.
+
+Expected:
+
+5
+Question 3 — Count Words
+
+Create article.txt:
+
+Python is easy to learn
+Python is powerful
+Python is useful
+
+Write:
+
+def count_words(filename):
+    # your code
+
+Return the total number of words in the file.
+
+Question 4 — Find a Specific Word
+
+Create message.txt:
+
+Python is a programming language.
+Python is widely used in AI.
+Python is also used for data science.
+
+Write:
+
+def find_word(filename, word):
+    # your code
+
+Return how many times word appears in the file.
+
+For:
+
+find_word("message.txt", "Python")
+
+Expected:
+
+3
+Question 5 — Write User Data
+
+Write a program that asks the user for:
+
+Name:
+Age:
+City:
+
+Then write the information into user.txt.
+
+For example:
+
+Name: Amjad
+Age: 25
+City: Berlin
+
+Use file writing rather than simply printing the information.
+
+Question 6 — Append New Data
+
+You already have:
+
+tasks.txt
+
+containing:
+
+Learn Python
+Practice SQL
+Study ML
+
+Ask the user for a new task and append it to the file.
+
+If the user enters:
+
+Practice file handling
+
+the file should become:
+
+Learn Python
+Practice SQL
+Study ML
+Practice file handling
+Question 7 — Copy a Text File
+
+Write:
+
+def copy_file(source, destination):
+    # your code
+
+The function should read everything from source.txt and write the same content into backup.txt.
+
+Do not use shutil.
+
+Question 8 — Filter Lines
+
+Create scores.txt:
+
+Ali,75
+Sara,92
+David,68
+Amjad,88
+John,55
+
+Write:
+
+def get_passing_students(filename):
+    # your code
+
+Return a list containing students whose score is 80 or higher.
+
+Expected:
+
+["Sara", "Amjad"]
+
+This is a good exercise because you're combining file reading + string processing + filtering.
+
+Question 9 — Find the Longest Line
+
+Create sentences.txt:
+
+Python is powerful.
+Machine learning is interesting.
+I am learning artificial intelligence.
+Programming requires consistent practice.
+
+Write:
+
+def longest_line(filename):
+    # your code
+
+Return the longest line.
+
+Don't use a built-in function that directly solves the entire problem.
+
+Question 10 — Simple Log Analyzer
+
+Create app.log:
+
+INFO User logged in
+ERROR Database connection failed
+INFO User viewed dashboard
+WARNING Password expires soon
+ERROR File not found
+INFO User logged out
+
+Write:
+
+def analyze_log(filename):
+    # your code
+
+Return a dictionary containing the number of:
+
+INFO
+WARNING
+ERROR
