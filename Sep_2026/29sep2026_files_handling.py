@@ -47,3 +47,23 @@ print(content)
 #✅ Problem 01 — Text File Reading: Successfully opened a text file, wrote/read content, repositioned the file pointer with seek(), and returned the data.
 #🧠 Key learning: Understand the difference between reading an existing file and using a write-capable mode that creates/overwrites the file.
 #🏆 Score: 8.5/10 | Text File Handling — IN PROGRESS
+
+#Problem 02:
+def count_lines():
+    with open('Sep_2026/students.txt', 'r') as f:
+        data = True
+        countl = 0
+        while data :
+            data = f.readline()
+            if data == '':
+                break
+            else:
+                countl +=1
+        return countl
+a = count_lines()
+print(a)
+
+#✅ Problem 02 — Count Lines: Correctly counted file lines using readline() and detected the end of the file with an empty string.
+#🧠 Key learning: Demonstrated understanding of reading a text file line-by-line and using EOF detection to control a loop.
+#🏆 Score: 9.5/10 | Text File Handling — IN PROGRESS
+
