@@ -67,3 +67,18 @@ print(a)
 #🧠 Key learning: Demonstrated understanding of reading a text file line-by-line and using EOF detection to control a loop.
 #🏆 Score: 9.5/10 | Text File Handling — IN PROGRESS
 
+
+#Problem 03
+#Return the total number of words in the file.
+def count_words():
+    with open('Sep_2026/articles.txt', 'r') as f:
+        data = f.read()
+        f.seek(0)
+        new_words = data.split()
+        return len(new_words)
+a = count_words()
+print(a)
+
+#✅ Problem 03 — Count Words: Correctly read the complete text file, split the content into words, and returned the word count.
+#🧠 Key learning: Demonstrated the difference between file reading and processing the resulting string with split().
+#🏆 Score: 9.8/10 | Text File Handling — IN PROGRESS
