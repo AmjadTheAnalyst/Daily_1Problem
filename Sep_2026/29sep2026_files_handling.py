@@ -103,3 +103,13 @@ with open('user.txt', 'w') as f:
 #✅ Problem 05 — Write User Data: Correctly collected user input and wrote formatted data to a text file using write mode and an f-string.
 #🧠 Key learning: Demonstrated correct use of 'w' mode, newline characters, type conversion, and context-managed file writing.
 #🏆 Score: 10/10 | Text File Handling — IN PROGRESS
+
+#Problem 6
+#Ask the user for a new task and append it to the file.
+with open('Sep_2026/tasks.txt', 'a') as f:
+    new_task = input('Please enter the new task: ')
+    f.write(f'\n{new_task}')
+
+#✅ Problem 06 — Append New Data: Correctly used append mode to add a new task to the existing text file without overwriting previous content.
+#🧠 Key learning: Demonstrated the difference between write mode and append mode and correctly handled line separation.
+#🏆 Score: 10/10 | Text File Handling — IN PROGRESS
