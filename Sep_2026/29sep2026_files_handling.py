@@ -82,3 +82,13 @@ print(a)
 #✅ Problem 03 — Count Words: Correctly read the complete text file, split the content into words, and returned the word count.
 #🧠 Key learning: Demonstrated the difference between file reading and processing the resulting string with split().
 #🏆 Score: 9.8/10 | Text File Handling — IN PROGRESS
+
+#Problem 4
+#Find a Specific Word
+with open('Sep_2026/articles.txt', 'r') as f:
+    data = f.read()
+    specific_count = data.count('Python')
+    print(specific_count)
+#✅ Problem 04 — Find a Specific Word: Correctly read the text file and counted occurrences of the target text using str.count().
+#🧠 Key learning: Demonstrated direct processing of file content after reading it, with no unnecessary function wrapper.
+#🏆 Score: 10/10 | Text File Handling — IN PROGRESS
