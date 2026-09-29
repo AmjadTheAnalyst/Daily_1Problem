@@ -152,3 +152,19 @@ import json
 with open('first_j', 'w') as f:
     json.dump(data, f, indent=4)
 
+###Exception Handling
+#lets say the files does not exists, and i want to open this in read mode
+import json
+with open('hello.json', 'r') as file:
+    data = json.load(file)
+    print(type(data))
+#here it will show so many details from program as well if file does not exists
+
+
+import json
+try:
+    with open('checking.json', 'r') as file:
+        data = json.load(file)
+except:
+    print(f'It seems that the {'checking.json'} does not exists')
+#but here, it will only display the written message
