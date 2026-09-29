@@ -92,3 +92,14 @@ with open('Sep_2026/articles.txt', 'r') as f:
 #✅ Problem 04 — Find a Specific Word: Correctly read the text file and counted occurrences of the target text using str.count().
 #🧠 Key learning: Demonstrated direct processing of file content after reading it, with no unnecessary function wrapper.
 #🏆 Score: 10/10 | Text File Handling — IN PROGRESS
+
+
+Name = input("Please enter your name: ")
+Age = int(input("Please enter your age: "))
+City = input("In which city you live: ")
+with open('user.txt', 'w') as f:
+    f.write(f'Name: {Name}\nAge: {Age}\nCity: {City}')
+
+#✅ Problem 05 — Write User Data: Correctly collected user input and wrote formatted data to a text file using write mode and an f-string.
+#🧠 Key learning: Demonstrated correct use of 'w' mode, newline characters, type conversion, and context-managed file writing.
+#🏆 Score: 10/10 | Text File Handling — IN PROGRESS
