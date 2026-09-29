@@ -128,3 +128,27 @@ with open('Sep_2026/scores.txt', 'r') as f:
 #⚠️ Problem 08 — Filter Lines: Correctly read the file line-by-line, but the result list was reset inside the loop and scores were searched as strings instead of being parsed as numbers.
 #🧠 Key learning: Read → parse → convert data type → apply condition. Also keep accumulated results outside the loop.
 #🏆 Score: 6.5/10 | Text File Handling — IN PROGRESS
+
+
+with open('Sep_2026/sentences.txt', 'r') as f:
+    data = f.readline() 
+    master_dict = []
+    while data:
+        user = {'Statement': data.strip(), 'length':len(data.strip()) }
+        master_dict.append(user)
+        data = f.readline()
+    for list_member in master_dict:
+        for dict_member in list_member:
+
+    print(master_dict)
+    f.seek(0)
+
+
+data = {'name': 'amjad',
+        'age': 30,
+        'postal_code': 10243}
+#now i want to save this python dict into a .json file
+import json
+with open('first_j', 'w') as f:
+    json.dump(data, f, indent=4)
+
