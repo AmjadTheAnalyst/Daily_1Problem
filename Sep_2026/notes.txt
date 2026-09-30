@@ -1,4 +1,0 @@
-Python
-SQL
-Machine Learning
-Deep Learning
