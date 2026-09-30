@@ -89,11 +89,6 @@ cwd = Path(__file__).resolve().parent.name
 print(cwd)
 
 #output
-(base) muhammadamjad@Muhammads-MBP Daily_1Problem % python3 -u "/Users/muhammadamjad/Desktop/Daily_1Problem/S
-ep_2026/tempCodeRunnerFile.py"
-tempCodeRunnerFile.py
-    
-
 import pandas as pd  
 #with open('Sep_2026/EQUITY_L.csv', 'r') as file:
 data = pd.read_csv('Sep_2026/EQUITY_L.csv' , sep=',')
