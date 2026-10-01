@@ -572,3 +572,89 @@ a = [{"name": "Laptop", "price": 1000, "quantity": 2}]
 #i want to know the total price of laptop for total quantity
 price = a[0]['price'] * a[0]['quantity']
 print(price)
+
+
+
+
+
+
+#Problem 05
+#-------------------------------------------------------------------------------------------------------
+# OOP Challenge — Customer
+
+# Create a Customer class with:
+# 1. name
+# 2. customer_id
+# 3. email
+# 4. balance
+# 5. orders (a list)
+class Customer():
+    def __init__(self, name, id, email, balance, orders): #orders is a list
+        self.name = name
+        self.id = id
+        self.email = email
+        self.balance = balance 
+        self.orders = orders
+    #Print the customer's information. 
+    #intemtionally skipped, btw i know how to do that
+    def add_balance(self, amount):
+        if amount > 0:
+            self.balance = self.balance + amount
+    def make_purchase(self, amount):
+        if amount > 0:
+            if self.balance > amount:
+                self.balance = self.balance - amount
+            else:
+                print('insufficient balance')
+    def add_order(self, order_id):
+        self.orders.append(order_id)
+    def get_order_count(self):
+        return f'Dear {self.name} your total orders are: {len(self.orders)}'
+customer = Customer("Ali","C001","ali@example.com",1000,[])
+
+#customer.display_customer()
+
+customer.add_balance(500)
+
+customer.make_purchase(300)
+
+customer.add_order("ORD001")
+customer.add_order("ORD002")
+
+print("Balance:", customer.balance)
+print("Order Count:", customer.get_order_count())
+# Expected:
+# Balance: 1200
+# Order Count: 2
+
+#✅ Customer OOP — Successfully created a Customer class with customer information, balance management, purchase logic, order tracking, and order counting.
+
+#🧠 Demonstrated strong understanding of object state and successfully transferred previous OOP concepts into a new domain without step-by-step guidance.
+
+#🔧 Key improvements: Use >= when a customer is allowed to spend their entire balance, and return the numeric order count directly from get_order_count() rather than embedding it inside a formatted string.
+
+#🏆 Score: 9.5/10 | OOP Practice — IN PROGRESS
+
+        
+
+# Methods:
+
+# 1. display_customer()
+#    Print the customer's information.
+
+# 2. add_balance(amount)
+#    Add money to the customer's balance.
+#    Amount must be greater than 0.
+
+# 3. make_purchase(amount)
+#    Deduct money from the balance.
+#    Rules:
+#    - amount must be greater than 0
+#    - customer cannot spend more than the current balance
+#    - if successful, update the balance
+
+# 4. add_order(order_id)
+#    Add an order ID to the customer's orders list.
+
+# 5. get_order_count()
+#    RETURN the number of orders the customer has made.
