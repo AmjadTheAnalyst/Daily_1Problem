@@ -331,7 +331,7 @@ class Product():
             print('Please enter the correct quantity')
     def sell(self,quantity):
         if quantity > 0:
-            if quantity == self.stock:
+            if self.stock >= quantity:
                 self.stock = self.stock - quantity
             else: 
                 print('Stock is insufficient')
@@ -339,6 +339,14 @@ class Product():
         value = (self.stock * self.price)
         return value
 product = Product("Laptop","P001",1000,10)
+
+#✅ Product OOP — Successfully created a Product class with product attributes, display functionality, stock addition, selling logic, and total stock value calculation.
+
+#🧠 Demonstrated strong understanding of object state and correctly used return in get_total_value(). The main issue was the sell() comparison: quantity == stock only allows selling the entire inventory. The condition should allow any valid quantity up to the available stock.
+
+#🔧 Key learning: Use <= when the boundary value is also valid, and handle invalid quantities explicitly.
+
+#🏆 Score: 8.5/10 | OOP Practice — IN PROGRESS
 
 # Create a method:
 #
