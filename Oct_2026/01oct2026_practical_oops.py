@@ -658,3 +658,107 @@ print("Order Count:", customer.get_order_count())
 
 # 5. get_order_count()
 #    RETURN the number of orders the customer has made.
+
+
+
+
+
+
+
+
+
+
+#Problem 06
+#----------------------------------------------------------------------------------------------
+# OOP Challenge — Course
+
+# Create a Course class with:
+# 1. course_name
+# 2. course_id
+# 3. instructor
+# 4. capacity
+# 5. students (a list)
+class Course():
+    def __init__(self,name, id, instructor, capacity, students):
+        self.name = name
+        self.id = id
+        self.instructor = instructor
+        self.capacity = capacity
+        self.students = students #[]
+    #display_course() intentionally skiped
+    def add_student(self, student_name):
+        if len(student_name) != 0:
+            if student_name not in self.students:
+                if self.capacity >= len(self.students)+1:
+                    self.students.append(student_name)
+    def remove_student(self, student_name):
+        if student_name in self.students:
+            self.students.remove(student_name)
+        else:
+            print(f'{student_name} does not exists in our data base.')
+    def get_student_count(self):
+        return len(self.students)
+    def has_student(self,student_name):
+        if student_name in self.students:
+            return True
+        else:
+            return False
+course = Course("Python Programming","PY101","Dr. Ahmed",3,[])
+
+# Add students
+course.add_student("Ali")
+course.add_student("Sara")
+course.add_student("David")
+
+# Try adding a fourth student
+course.add_student("John")
+
+# Try adding a duplicate
+course.add_student("Ali")
+
+print("Student Count:", course.get_student_count())
+
+print("Ali enrolled:", course.has_student("Ali"))
+print("John enrolled:", course.has_student("John"))
+
+course.remove_student("Sara")
+
+print("Student Count:", course.get_student_count())
+
+#✅ Course OOP — Successfully created a Course class with course information, student enrollment, capacity management, duplicate prevention, student removal, student counting, and membership checking.
+
+#🧠 Demonstrated strong understanding of object state, list operations, conditional validation, membership testing, and returning usable values from methods.
+
+#🏆 Successfully handled multiple constraints inside add_student(): valid name, duplicate prevention, and course capacity.
+
+#🎯 Successfully transferred OOP concepts across multiple domains: BankAccount → Employee → Product → Order → Customer → Course.
+
+#🏆 Score: 10/10 | OOP Practice — IN PROGRESS
+
+#course.display_course()
+
+# Methods:
+
+# 1. display_course()
+#    Print the course information.
+
+# 2. add_student(student_name)
+#    Add a student to the students list.
+#
+#    Rules:
+#    - Student name cannot be empty
+#    - Do not add the same student twice
+#    - Do not exceed the course capacity
+
+# 3. remove_student(student_name)
+#    Remove a student from the course.
+#
+#    If the student does not exist, print an appropriate message.
+
+# 4. get_student_count()
+#    RETURN the number of enrolled students.
+
+# 5. has_student(student_name)
+#    RETURN True if the student is enrolled.
+#    Otherwise return False.
+
