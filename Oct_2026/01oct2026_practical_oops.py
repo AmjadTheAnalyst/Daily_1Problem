@@ -15,21 +15,6 @@
 # - Changing object state
 # - Returning values
 # - Basic validation
-#
-#
-# ------------------------------------------------------------
-# REQUIREMENT 1 — CREATE THE CLASS
-# ------------------------------------------------------------
-#
-# Create a class called BankAccount.
-#
-# The class should have these attributes:
-#
-#   account_holder
-#   account_number
-#   balance
-#
-# These values should be received through __init__().
 class BankAccount():
     def __init__(self, account_holder, account_number, balance):
         self.account_holder = account_holder
@@ -67,7 +52,22 @@ account.display_account()
 🔧 Key improvements: Allow withdrawal of the entire balance by using <= instead of <, print the invalid withdrawal message, and return the balance from check_balance() when the value needs to be used by the caller.
 
 🏆 Score: 9.0/10 | OOP Practice — IN PROGRESS'''
-        
+
+
+
+# ------------------------------------------------------------
+# REQUIREMENT 1 — CREATE THE CLASS
+# ------------------------------------------------------------
+#
+# Create a class called BankAccount.
+#
+# The class should have these attributes:
+#
+#   account_holder
+#   account_number
+#   balance
+#
+# These values should be received through __init__().       
 # ------------------------------------------------------------
 # REQUIREMENT 2 — DEPOSIT
 # ------------------------------------------------------------
@@ -124,51 +124,170 @@ account.display_account()
 # Account Holder: <name>
 # Account Number: <number>
 # Balance: <balance>
-#
-#
-# ------------------------------------------------------------
-# TEST YOUR CLASS
-# ------------------------------------------------------------
-#
-# Create the following object:
-#
-# account = BankAccount("Ali", "12345", 1000)
-#
-# Then perform these operations:
-#
-# 1. Deposit 500
-# 2. Withdraw 200
-# 3. Check the balance
-# 4. Display the account information
-#
-#
-# ------------------------------------------------------------
-# EXPECTED FINAL BALANCE
-# ------------------------------------------------------------
-#
-# 1300
-#
-#
-# ------------------------------------------------------------
-# EXTRA TESTS
-# ------------------------------------------------------------
-#
-# After your main test works, also test:
-#
-# - Deposit 0
-# - Deposit -100
-# - Withdraw 0
-# - Withdraw -50
-# - Withdraw more than the current balance
-#
-# Make sure your program handles these cases correctly.
-#
+
+
+
 # ============================================================
-# WRITE YOUR SOLUTION BELOW
+# OOP PRACTICE — EMPLOYEE MANAGEMENT
 # ============================================================
+#
+# Create an Employee class that represents an employee
+# in a company.
+#
+# Practice:
+# - Class
+# - Object
+# - __init__()
+# - self
+# - Attributes
+# - Methods
+# - Changing object state
+# - Returning values
+# - Basic validation
+#
+#
+# ------------------------------------------------------------
+# REQUIREMENT 1 — CREATE THE CLASS
+# ------------------------------------------------------------
+#
+# Create a class called Employee.
+class Employee():
+    def __init__(self,name,id,department,salary):
+        self.name =name
+        self.id = id
+        self.department = department
+        self.salary = salary
+    def display_employee(self):
+        print(f'Employee Name: {self.name}\nEmployee ID: {self.id}\nDepartment: {self.department}\nSalary: {self.salary}')
+    def increase_salary(self, amount):
+        if amount > 0:
+            self.salary = self.salary + amount
+        else:
+            print('amount is invalid, so increment is not possible')
 
-class BankAccount:
-    pass
+    def change_department(self, new_department):
+        self.department = new_department
+    def get_annual_salary(self):
+        annual_salary = self.salary * 12
+        print(f'Hello {self.name}, Your annual salary is: {annual_salary}')
+employee = Employee("Ali","EMP001","Data Science",3000)
+#print(employee.display_employee())
+#print(employee.increase_salary(-500))
+#print(employee.salary)
+#employee.increase_salary(500)
+#print(employee.salary)
+
+#✅ Employee OOP — Successfully created an Employee class with initialization, attributes, display functionality, salary modification, department modification, and annual salary calculation.
+
+#🧠 Demonstrated strong understanding of classes, objects, self, attributes, methods, and modifying object state through methods. Successfully transferred the OOP concepts from the BankAccount exercise to a new domain.
+
+#🔧 Key learning: get_annual_salary() should return the calculated value rather than only printing it. Also, methods that already print should normally be called directly rather than wrapped in print().
+
+#🏆 Score: 9.5/10 | OOP Practice — IN PROGRESS
 
 
-# Create your object and test your methods here.
+
+# The employee should have these attributes:
+#
+#   name
+#   employee_id
+#   department
+#   salary
+#
+# These values should be provided when creating the object.
+#
+#
+# ------------------------------------------------------------
+# REQUIREMENT 2 — DISPLAY EMPLOYEE
+# ------------------------------------------------------------
+#
+# Create a method:
+#
+#   display_employee()
+#
+# It should display:
+#
+# Employee Name: <name>
+# Employee ID: <employee_id>
+# Department: <department>
+# Salary: <salary>
+#
+#
+# ------------------------------------------------------------
+# REQUIREMENT 3 — INCREASE SALARY
+# ------------------------------------------------------------
+#
+# Create a method:
+#
+#   increase_salary(amount)
+#
+# Rules:
+#
+# - amount must be greater than 0.
+# - If valid, increase the employee's salary by that amount.
+# - If amount is 0 or negative, reject the increase.
+#
+#
+# ------------------------------------------------------------
+# REQUIREMENT 4 — CHANGE DEPARTMENT
+# ------------------------------------------------------------
+#
+# Create a method:
+#
+#   change_department(new_department)
+#
+# The method should update the employee's department.
+#
+#
+# ------------------------------------------------------------
+# REQUIREMENT 5 — GET ANNUAL SALARY
+# ------------------------------------------------------------
+#
+# Create a method:
+#
+#   get_annual_salary()
+#
+# The employee's salary is monthly.
+#
+# Return the employee's annual salary.
+#
+#
+# ------------------------------------------------------------
+# REQUIREMENT 6 — TEST YOUR CLASS
+# ------------------------------------------------------------
+#
+# Create this employee:
+#
+# employee = Employee(
+#     "Ali",
+#     "EMP001",
+#     "Data Science",
+#     3000
+# )
+#
+# Then:
+#
+# 1. Display the employee information.
+# 2. Increase the salary by 500.
+# 3. Change the department to "AI Engineering".
+# 4. Get the annual salary.
+# 5. Display the updated employee information.
+#
+#
+# ------------------------------------------------------------
+# EXPECTED RESULTS
+# ------------------------------------------------------------
+#
+# Initial monthly salary:
+# 3000
+#
+# After salary increase:
+# 3500
+#
+# Annual salary:
+# 42000
+#
+# Final department:
+# AI Engineering
+
+
