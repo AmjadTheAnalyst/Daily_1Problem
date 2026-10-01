@@ -458,51 +458,117 @@ product = Product("Laptop","P001",1000,10)
 #     1000,
 #     10
 # )
-#
-# Then:
-#
-# 1. Display the product.
-# 2. Add 5 items to stock.
-# 3. Sell 3 items.
-# 4. Get the total stock value.
-# 5. Display the updated product.
-#
-#
-# ------------------------------------------------------------
-# EXPECTED FINAL STATE
-# ------------------------------------------------------------
-#
-# Name: Laptop
-# ID: P001
-# Price: 1000
-# Stock: 12
-#
-# Total stock value:
-#
-# 12000
-#
-#
-# ------------------------------------------------------------
-# EXTRA TESTS
-# ------------------------------------------------------------
-#
-# Also test:
-#
-# - add_stock(0)
-# - add_stock(-5)
-# - sell(0)
-# - sell(-2)
-# - sell more than available stock
-#
-# ============================================================
-# WRITE YOUR SOLUTION BELOW
-# ============================================================
+#--------------------------------------------------------------------------------------------------------
+#Problem 04
+# OOP Challenge — Order
 
-class Product:
-    pass
+# Create an Order class with:
+# 1. customer_name
+# 2. order_id
+# 3. items (a list of dictionaries)
+class Order():
+    def __init__(self, name, id, items ): # items {"name": "Laptop", "price": 1000, "quantity": 2}
+        self.name = name
+        self.id = id
+        self.items = items
+
+    def display_order(self):
+        print(f'Product Name: {self.name}\nID: {self.id}\nAll Items: {self.items}')
+    def add_item(self, name, price, quantity):
+        if price > 0 and quantity > 0:
+            new_item = {'name': name, 'price': price, 'quantity': quantity}
+            self.items.append(new_item)
+    def calculate_total(self):
+        total_quantity = []
+        for value in range(0,len(self.items)):
+            item_price = (self.items[value]['price']) * (self.items[value]['quantity'])  
+            total_quantity.append(item_price)    
+        return sum(total_quantity) 
+    def get_item_count(self):
+        #total_items = self.items[0]['quantity'] 
+        #return total_items
+        total_quantity = 0
+        for value in range(0,len(self.items)):
+            total_quantity = total_quantity + self.items[value]['quantity']
+        return total_quantity
+
+order = Order("Ali", "ORD001", [])
+order.add_item("Laptop", 1000, 2)
+order.add_item("Mouse", 50, 3)
+order.add_item("Keyboard", 80, 1)
+
+order.display_order()
+
+total = order.calculate_total()
+print("Total:", total)
+
+count = order.get_item_count()
+print("Item Count:", count)
+
+#✅ Order OOP — Successfully created an Order class that stores customer information and a collection of order items.
+
+#🧠 Demonstrated strong understanding of object state, lists of dictionaries, method-based state modification, validation, iteration, calculation, and returning values from methods.
+
+#💡 Successfully introduced the concept of an object containing and working with multiple items through self.items.
+
+#🔧 Minor improvements: display_order() should label self.name as Customer Name rather than Product Name, and direct iteration over self.items can simplify the loops.
 
 
-# Create your product object here.
+#🏆 Score: 9.7/10 | OOP Practice — IN PROGRESS
+
+# 4. get_item_count()
+#    RETURN the total number of items ordered.
 
 
-# Test your methods here.
+
+#    Print the customer name, order ID, and all ordered items.
+
+# Each item will look like:
+# {"name": "Laptop", "price": 1000, "quantity": 2}
+
+# Methods:
+
+# 1. display_order()
+#    Print the customer name, order ID, and all ordered items.
+
+# 2. add_item(name, price, quantity)
+#    Add a new item to the order.
+#    Quantity must be greater than 0.
+#    Price must be greater than 0.
+
+# 3. calculate_total()
+#    Calculate and RETURN the total order price.
+#    Formula:
+#    price × quantity for each item
+
+# 4. get_item_count()
+#    RETURN the total number of items ordered.
+#    Example:
+#    Laptop quantity 2 + Mouse quantity 3 = 5
+
+
+# Test your class:
+
+order = Order("Ali", "ORD001", [])
+
+order.add_item("Laptop", 1000, 2)
+order.add_item("Mouse", 50, 3)
+order.add_item("Keyboard", 80, 1)
+
+order.display_order()
+
+total = order.calculate_total()
+print("Total:", total)
+
+count = order.get_item_count()
+print("Item Count:", count)
+
+
+# Expected:
+# Total: 2230
+# Item Count: 6
+
+a = [{"name": "Laptop", "price": 1000, "quantity": 2}]
+#i want to know the total price of laptop for total quantity
+price = a[0]['price'] * a[0]['quantity']
+print(price)
