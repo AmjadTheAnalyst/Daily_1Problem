@@ -290,4 +290,211 @@ employee = Employee("Ali","EMP001","Data Science",3000)
 # Final department:
 # AI Engineering
 
+#Problem 03
+# ============================================================
+# OOP PRACTICE — PRODUCT
+# ============================================================
+#
+# Create a Product class that represents a product in an
+# online store.
+#
+# Practice:
+# - Class
+# - Object
+# - __init__()
+# - self
+# - Attributes
+# - Methods
+# - Changing object state
+# - Returning values
+# - Basic validation
+#
+#
+# ------------------------------------------------------------
+# REQUIREMENT 1 — CREATE THE CLASS
+# ------------------------------------------------------------
+#
+# Create a class called Product.
+class Product():
+    def __initi__(self, name, id, price, stock):
+        self.name = name
+        self.id = id
+        self.price = price
+        self.stock = stock
+    def display_product(self):
+        print(f'Product Name: {self.name}\nID: {self.id}\nPrice: {self.price}\nStock: {self.stock}')
 
+    def add_stock(self,quantity):
+        if quantity > 0:
+            self.stock = self.stock + quantity
+        else:
+            print('Please enter the correct quantity')
+    def sell(self,quantity):
+        if quantity > 0:
+            if quantity == self.stock:
+                self.stock = self.stock - quantity
+            else: 
+                print('Stock is insufficient')
+    def get_total_value(self):
+        value = (self.stock * self.price)
+        return value
+product = Product("Laptop","P001",1000,10)
+
+# Create a method:
+#
+#   get_total_value()
+#
+# Return the total value of the current stock.
+#
+# Formula:
+#
+#   price × stock
+#
+# Example:
+#
+# price = 50
+# stock = 10
+#
+# total value = 500
+
+
+
+# The product should have these attributes:
+#
+#   name
+#   product_id
+#   price
+#   stock
+#
+# These values should be provided when creating the object.
+#
+#
+# ------------------------------------------------------------
+# REQUIREMENT 2 — DISPLAY PRODUCT
+# ------------------------------------------------------------
+#
+# Create a method:
+#
+#   display_product()
+#
+# It should display:
+#
+# Product Name: <name>
+# Product ID: <product_id>
+# Price: <price>
+# Stock: <stock>
+#
+#
+# ------------------------------------------------------------
+# REQUIREMENT 3 — ADD STOCK
+# ------------------------------------------------------------
+#
+# Create a method:
+#
+#   add_stock(quantity)
+#
+# Rules:
+#
+# - quantity must be greater than 0.
+# - If valid, increase the stock by that quantity.
+# - Otherwise, print an appropriate message.
+#
+#
+# ------------------------------------------------------------
+# REQUIREMENT 4 — SELL PRODUCT
+# ------------------------------------------------------------
+#
+# Create a method:
+#
+#   sell(quantity)
+#
+# Rules:
+#
+# - quantity must be greater than 0.
+# - The customer cannot buy more than the available stock.
+# - If valid, decrease the stock by that quantity.
+# - Otherwise, print an appropriate message.
+#
+#
+# ------------------------------------------------------------
+# REQUIREMENT 5 — GET TOTAL VALUE
+# ------------------------------------------------------------
+#
+# Create a method:
+#
+#   get_total_value()
+#
+# Return the total value of the current stock.
+#
+# Formula:
+#
+#   price × stock
+#
+# Example:
+#
+# price = 50
+# stock = 10
+#
+# total value = 500
+#
+#
+# ------------------------------------------------------------
+# REQUIREMENT 6 — TEST YOUR CLASS
+# ------------------------------------------------------------
+#
+# Create this product:
+#
+# product = Product(
+#     "Laptop",
+#     "P001",
+#     1000,
+#     10
+# )
+#
+# Then:
+#
+# 1. Display the product.
+# 2. Add 5 items to stock.
+# 3. Sell 3 items.
+# 4. Get the total stock value.
+# 5. Display the updated product.
+#
+#
+# ------------------------------------------------------------
+# EXPECTED FINAL STATE
+# ------------------------------------------------------------
+#
+# Name: Laptop
+# ID: P001
+# Price: 1000
+# Stock: 12
+#
+# Total stock value:
+#
+# 12000
+#
+#
+# ------------------------------------------------------------
+# EXTRA TESTS
+# ------------------------------------------------------------
+#
+# Also test:
+#
+# - add_stock(0)
+# - add_stock(-5)
+# - sell(0)
+# - sell(-2)
+# - sell more than available stock
+#
+# ============================================================
+# WRITE YOUR SOLUTION BELOW
+# ============================================================
+
+class Product:
+    pass
+
+
+# Create your product object here.
+
+
+# Test your methods here.
