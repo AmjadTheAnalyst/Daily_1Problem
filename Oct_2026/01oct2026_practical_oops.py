@@ -42,12 +42,12 @@ class BankAccount():
             print('This is an invalid amount')
     def withdraw(self, amount):
         if amount > 0:
-            if amount < self.balance:
+            if amount <= self.balance:
                 self.balance = self.balance - amount
             else:
                 print('Account does not have sufficient balance')
         else:
-            ('Amount can not be 0')
+            print('Amount can not be 0')
     def check_balance(self):
         print(f'Dear {self.account_holder} you current balance is:\n{self.balance}')
     def display_account(self):
