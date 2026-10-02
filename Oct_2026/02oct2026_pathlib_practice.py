@@ -9,3 +9,7 @@ for file in Path('Sep_2026').glob('*.py'):
     print(file)
     all_files.append(file)
 print(len(all_files))
+
+#checking if something is really a dict or a file
+from pathlib import Path
+print(Path('Oct_2026').is_dir())
