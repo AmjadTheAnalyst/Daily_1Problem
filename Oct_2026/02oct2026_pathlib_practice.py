@@ -13,3 +13,7 @@ print(len(all_files))
 #checking if something is really a dict or a file
 from pathlib import Path
 print(Path('Oct_2026').is_dir())
+
+#created a .py file in relative dir 
+from pathlib import Path
+Path('Oct_2026/03oct2026_debugging_testing.py').touch()
